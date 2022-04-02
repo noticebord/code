@@ -17,9 +17,50 @@
 		"commands": [
 			{
 				"command": "noticebord.helloWorld",
-				"title": "Hello World"
+				"title": "Noticebord: Hello World"
+			},
+			{
+				"command": "noticebord.showOverview",
+				"title": "Noticebord: Show Overview"
+			},
+			{
+				"command": "noticebord.showProfile",
+				"title": "Noticebord: Show Profile"
+			},
+			{
+				"command": "noticebord.createNotice",
+				"title": "Noticebord: Create Notice"
+			},
+			{
+				"command": "noticebord.createTeamNotice",
+				"title": "Noticebord: Create Team Notice"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "noticebord",
+					"title": "Noticebord",
+					"icon": "media/logo.svg"
+				}
+			]
+		},
+		"views": {
+            "noticebord": [
+                {
+                    "id": "notices",
+                    "name": "Notices"
+                },
+                {
+                    "id": "team-notices",
+                    "name": "Team Notices"
+                },
+                {
+                    "id": "topics",
+                    "name": "Topics"
+                }
+            ]
+        }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
