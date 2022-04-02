@@ -10,7 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:noticebord.helloWorld"
+        "onCommand:noticebord.helloWorld",
+        "onCommand:noticebord.showOverview",
+        "onCommand:noticebord.showProfile",
+        "onCommand:noticebord.createNotice",
+        "onCommand:noticebord.createTeamNotice",
+		"onView:notices",
+		"onView:teamNotices",
+		"onview:topics"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -34,6 +41,10 @@
 			{
 				"command": "noticebord.createTeamNotice",
 				"title": "Noticebord: Create Team Notice"
+			},
+			{
+				"command": "notices.showNotice",
+				"title": "Show Notice"
 			}
 		],
 		"viewsContainers": {
@@ -52,7 +63,7 @@
                     "name": "Notices"
                 },
                 {
-                    "id": "team-notices",
+                    "id": "teamNotices",
                     "name": "Team Notices"
                 },
                 {
